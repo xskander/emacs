@@ -22,6 +22,9 @@
             'rvm
             'rspec-mode
             'highlight-indentation
+            'color-theme-solarized
+            'projectile-rails
+            'switch-window
             'web-mode))
 
 (dolist (package my-required-packages)

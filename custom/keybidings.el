@@ -21,3 +21,9 @@
 
 ;;fiplr
 (global-set-key (kbd "C-c f") 'fiplr-find-file)
+
+;;switch window
+(global-set-key (kbd "C-x o") 'switch-window)
+
+;; clear whitespace
+(global-set-key (kbd "C-x w") 'whitespace-cleanup)

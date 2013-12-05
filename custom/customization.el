@@ -7,6 +7,9 @@
 ;;line number mode
 (global-linum-mode t)
 
+;; themes
+(load-theme 'solarized-dark t)
+
 ;;enh ruby mode for ruby code verification
 (setq enh-ruby-program "~/.rvm/rubies/ruby-2.0.0-p195/bin/ruby")
 (autoload 'enh-ruby-mode "enh-ruby-mode" "Major mode for ruby files" t)
@@ -21,9 +24,9 @@
 ;;highlight indentation
 (require 'highlight-indentation)
 (add-hook 'enh-ruby-mode-hook
-	  (lambda () (highlight-indentation-current-column-mode)))
+    (lambda () (highlight-indentation-current-column-mode)))
 (add-hook 'coffee-mode-hook
-	  (lambda () (highlight-indentation-current-column-mode)))
+    (lambda () (highlight-indentation-current-column-mode)))
 
 ;;web-mode
 (require 'web-mode)
@@ -52,7 +55,7 @@
 ;;fiplr
 (setq fiplr-root-markers '(".git" ".svn"))
 (setq fiplr-ignored-globs '((directories (".git" ".svn" "selenium" "doc" "tmp"))
-			    (files ("*.jpg" "*.png" "*.zip" "*~" ".DS_Store" "tags" "TAGS" "*.ru" ".keep"))))
+          (files ("*.jpg" "*.png" "*.zip" "*~" ".DS_Store" "tags" "TAGS" "*.ru" ".keep"))))
 
 
 ;; ;; fill column indicator
@@ -83,3 +86,27 @@
 ;; always refresh file content if they change on disk
 (global-auto-revert-mode 1)
 
+;; RVM
+(require 'rvm)
+(rvm-use-default)
+
+;; Rspec
+(require 'rspec-mode)
+(setq rspec-use-rake-when-possible nil)
+
+;;switch windows
+(require 'switch-window)
+
+;;no easy keys
+(require 'no-easy-keys)
+(no-easy-keys 1)
+
+;;default line spacing
+(setq-default line-spacing 1)
+
+;;format linum
+(setq linum-format "%4d ")
+
+;;projectile rails
+(add-hook 'projectile-mode-hook 'projectile-rails-on)
+(projectile-global-mode)
