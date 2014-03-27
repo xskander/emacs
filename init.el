@@ -25,6 +25,7 @@
             'color-theme-solarized
             'projectile-rails
             'switch-window
+            'feature-mode
             'web-mode))
 
 (dolist (package my-required-packages)

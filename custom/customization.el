@@ -11,7 +11,6 @@
 (load-theme 'solarized-dark t)
 
 ;;enh ruby mode for ruby code verification
-(setq enh-ruby-program "~/.rvm/rubies/ruby-2.0.0-p195/bin/ruby")
 (autoload 'enh-ruby-mode "enh-ruby-mode" "Major mode for ruby files" t)
 (add-to-list 'auto-mode-alist '("\\.rb$" . enh-ruby-mode))
 (add-to-list 'auto-mode-alist '("\\.rake$" . enh-ruby-mode))
@@ -28,29 +27,6 @@
 (add-hook 'coffee-mode-hook
     (lambda () (highlight-indentation-current-column-mode)))
 
-;;web-mode
-(require 'web-mode)
-(add-to-list 'auto-mode-alist '("\\.phtml\\'" . web-mode))
-(add-to-list 'auto-mode-alist '("\\.tpl\\.php\\'" . web-mode))
-(add-to-list 'auto-mode-alist '("\\.jsp\\'" . web-mode))
-(add-to-list 'auto-mode-alist '("\\.as[cp]x\\'" . web-mode))
-(add-to-list 'auto-mode-alist '("\\.erb\\'" . web-mode))
-(add-to-list 'auto-mode-alist '("\\.mustache\\'" . web-mode))
-(add-to-list 'auto-mode-alist '("\\.djhtml\\'" . web-mode))
-(add-to-list 'auto-mode-alist '("\\.html?\\'" . web-mode))
-
-(defun web-mode-hook () "Hooks for Web mode."
-       (setq web-mode-markup-indent-offset 2)
-       (setq web-mode-markup-indent-offset 2)
-       (setq web-mode-css-indent-offset 2)
-       (setq web-mode-css-indent-offset 2)
-       (setq web-mode-indent-style 2)
-       (setq web-mode-style-padding 1)
-       (setq web-mode-script-padding 1)
-       (setq web-mode-block-padding 0)
-       (setq web-mode-comment-style 2)
-       ) (add-hook 'web-mode-hook 'web-mode-hook)
-
 
 ;;fiplr
 (setq fiplr-root-markers '(".git" ".svn"))
@@ -58,12 +34,14 @@
           (files ("*.jpg" "*.png" "*.zip" "*~" ".DS_Store" "tags" "TAGS" "*.ru" ".keep"))))
 
 
-;; ;; fill column indicator
+;;fill column indicator
 (require 'fill-column-indicator)
-(setq-default fci-rule-column 80)
-(setq fci-handle-truncate-lines nil)
+(setq-default fci-rule-column 85)
+;; (setq fci-handle-truncate-lines nil)
+
 (define-globalized-minor-mode global-fci-mode fci-mode (lambda () (fci-mode 1)))
 (global-fci-mode 1)
+
 (defun auto-fci-mode (&optional unused)
   (if (> (window-width) fci-rule-column)
       (fci-mode 1)
@@ -110,3 +88,21 @@
 ;;projectile rails
 (add-hook 'projectile-mode-hook 'projectile-rails-on)
 (projectile-global-mode)
+
+(defadvice split-window (after move-point-to-new-window activate)
+  "Moves the point to the newly created window after splitting."
+  (other-window 1))
+
+;;disable auto searching
+(setq ido-auto-merge-delay-time 99999)
+
+(require 'feature-mode)
+(add-to-list 'auto-mode-alist '("\.feature$" . feature-mode))
+
+
+;;ack setup
+(setq ack-and-a-half-prompt-for-directory t)
+
+;;sass-mode
+(autoload 'scss-mode "scss-mode")
+(add-to-list 'auto-mode-alist '("\\.scss\\'" . scss-mode))
