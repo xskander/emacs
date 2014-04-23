@@ -26,7 +26,8 @@
             'projectile-rails
             'switch-window
             'feature-mode
-            'web-mode))
+            'web-mode
+            'haml-mode))
 
 (dolist (package my-required-packages)
   (when (not (package-installed-p package))

@@ -103,6 +103,11 @@
 ;;ack setup
 (setq ack-and-a-half-prompt-for-directory t)
 
-;;sass-mode
-(autoload 'scss-mode "scss-mode")
-(add-to-list 'auto-mode-alist '("\\.scss\\'" . scss-mode))
+;;haml mode
+(add-hook 'haml-mode-hook
+          (lambda ()
+            (setq indent-tabs-mode nil)
+            (define-key haml-mode-map "\C-m" 'newline-and-indent)))
+
+;;scss mode
+(require 'scss-mode)
