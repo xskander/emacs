@@ -27,7 +27,11 @@
             'switch-window
             'feature-mode
             'web-mode
-            'haml-mode))
+            'haml-mode
+            'slim-mode
+            'coffee-mode
+            'rubocop
+            'expand-region))
 
 (dolist (package my-required-packages)
   (when (not (package-installed-p package))

@@ -35,20 +35,19 @@
 
 
 ;;fill column indicator
-(require 'fill-column-indicator)
-(setq-default fci-rule-column 85)
-;; (setq fci-handle-truncate-lines nil)
+;;uncomment this
+;; (require 'fill-column-indicator)
+;; (setq-default fci-rule-column 80)
+;; (define-globalized-minor-mode global-fci-mode fci-mode (lambda () (fci-mode 1)))
+;; (global-fci-mode 1)
 
-(define-globalized-minor-mode global-fci-mode fci-mode (lambda () (fci-mode 1)))
-(global-fci-mode 1)
-
-(defun auto-fci-mode (&optional unused)
-  (if (> (window-width) fci-rule-column)
-      (fci-mode 1)
-    (fci-mode 0))
-  )
-(add-hook 'after-change-major-mode-hook 'auto-fci-mode)
-(add-hook 'window-configuration-change-hook 'auto-fci-mode)
+;; (defun auto-fci-mode (&optional unused)
+;;   (if (> (window-width) fci-rule-column)
+;;       (fci-mode 1)
+;;     (fci-mode 0))
+;;   )
+;; (add-hook 'after-change-major-mode-hook 'auto-fci-mode)
+;; (add-hook 'window-configuration-change-hook 'auto-fci-mode)
 
 ;; indentation
 (setq-default indent-tabs-mode nil)
@@ -109,5 +108,32 @@
             (setq indent-tabs-mode nil)
             (define-key haml-mode-map "\C-m" 'newline-and-indent)))
 
-;;scss mode
-(require 'scss-mode)
+;;nuke all buffers
+(defun nuke-all-buffers ()
+  (interactive)
+  (mapcar 'kill-buffer (buffer-list))
+  (delete-other-windows))
+
+;; css mode for scss files
+(add-to-list 'auto-mode-alist '("\\.scss\\'" . css-mode))
+
+
+(setq whitespace-style '(trailing space-before-tab indentation empty space-after-tab))
+(custom-set-variables '(coffee-tab-width 2))
+;;js mode for coffe script files
+;;(add-to-list 'auto-mode-alist '("\\.js.coffee\\'" . js-mode))
+
+;;activate corespunding ruby
+(rvm-activate-corresponding-ruby)
+
+
+;;start web-mode for .erb files
+(add-to-list 'auto-mode-alist '("\\.erb\\'" . web-mode))
+ (setq x-alt-keysym 'meta)
+
+;;expand region
+(require 'expand-region)
+
+;;unbomd ctrl z
+(global-unset-key (kbd "C-z"))
+(global-unset-key (kbd "C-x C-z"))
