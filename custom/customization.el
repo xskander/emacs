@@ -151,3 +151,7 @@
      return d
      if (equal d root)
      return nil)))
+
+
+;; yas snippets
+(add-to-list 'yas/root-directory "../vendors/yasnippet-snippets-master")
