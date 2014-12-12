@@ -31,12 +31,11 @@
 ;;kill all buffers
 (global-set-key (kbd "C-x d") 'nuke-all-buffers)
 
-;;rubocop file
-(global-set-key (kbd "C-x R") 'rubocop-check-current-file)
-
 ;;expand region
 (global-set-key (kbd "C-x q") 'er/mark-inside-quotes)
 (global-set-key (kbd "C-x p") 'er/mark-inside-pairs)
 (global-set-key (kbd "C-x r") 'er/expand-region)
 
-(global-set-key (kbd "C-c i") 'ispell)
+;; Frames
+(global-set-key (kbd "C-c n") 'new-frame)
+(global-set-key (kbd "C-c o") 'other-frame)

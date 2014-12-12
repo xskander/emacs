@@ -102,6 +102,9 @@
 ;;ack setup
 (setq ack-and-a-half-prompt-for-directory t)
 
+;;final newline
+(setq require-final-newline t)
+
 ;;haml mode
 (add-hook 'haml-mode-hook
           (lambda ()
@@ -121,7 +124,7 @@
 (setq whitespace-style '(trailing space-before-tab indentation empty space-after-tab))
 (custom-set-variables '(coffee-tab-width 2))
 ;;js mode for coffe script files
-;;(add-to-list 'auto-mode-alist '("\\.js.coffee\\'" . js-mode))
+(add-to-list 'auto-mode-alist '("\\.js.erb\\'" . js-mode))
 
 ;;activate corespunding ruby
 (rvm-activate-corresponding-ruby)
@@ -137,3 +140,14 @@
 ;;unbomd ctrl z
 (global-unset-key (kbd "C-z"))
 (global-unset-key (kbd "C-x C-z"))
+
+(require 'compile)
+;; Find root directory by searching for Gemfile
+(defun* get-closest-gemfile-root (&optional (file "Gemfile"))
+  (let ((root (expand-file-name "/")))
+    (loop 
+     for d = default-directory then (expand-file-name ".." d)
+     if (file-exists-p (expand-file-name file d))
+     return d
+     if (equal d root)
+     return nil)))

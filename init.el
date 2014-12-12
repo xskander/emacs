@@ -30,8 +30,8 @@
             'haml-mode
             'slim-mode
             'coffee-mode
-            'rubocop
-            'expand-region))
+            'expand-region
+            'yasnippet))
 
 (dolist (package my-required-packages)
   (when (not (package-installed-p package))

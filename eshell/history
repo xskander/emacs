@@ -1,0 +1,12 @@
+clear
+cd ..
+cd ..
+clear
+cucumber --profile=test features_test/rwd_homepage/
+cucumber --profile=test features_test/rwd_homepage/
+cucumber --profile=test features_test/rwd_homepage/
+clear
+cucumber --profile=test features_test/rwd_homepage/recent_questions_module.feature 
+cucumber --profile=test features_test/rwd_homepage/recent_questions_module.feature 
+cucumber --profile=test features_test/rwd_homepage/recent_review_module.feature 
+cucumber --profile=test features_test/rwd_homepage
