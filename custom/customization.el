@@ -145,13 +145,21 @@
 ;; Find root directory by searching for Gemfile
 (defun* get-closest-gemfile-root (&optional (file "Gemfile"))
   (let ((root (expand-file-name "/")))
-    (loop 
+    (loop
      for d = default-directory then (expand-file-name ".." d)
      if (file-exists-p (expand-file-name file d))
      return d
      if (equal d root)
      return nil)))
 
+(setq yas-snippet-dirs
+      '("~/.emacs.d/snippets"                 ;; personal snippets
+        ))
 
-;; yas snippets
-(add-to-list 'yas/root-directory "../vendors/yasnippet-snippets-master")
+(yas-global-mode 1)
+
+;; Kill whitespace on save
+(add-hook 'before-save-hook 'delete-trailing-whitespace)
+
+;;set command history mode
+(setq command-history-mode t)

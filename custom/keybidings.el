@@ -39,3 +39,6 @@
 ;; Frames
 (global-set-key (kbd "C-c n") 'new-frame)
 (global-set-key (kbd "C-c o") 'other-frame)
+
+;; Command History
+(global-set-key (kbd "C-c h") 'command-history)
