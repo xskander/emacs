@@ -42,3 +42,6 @@
 
 ;; Command History
 (global-set-key (kbd "C-c h") 'command-history)
+
+;; kill current buffer
+(global-set-key (kbd "C-x k") 'volatile-kill-buffer)

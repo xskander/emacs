@@ -1,0 +1,7 @@
+# -*- mode: snippet -*-
+# name: then step
+# key: sthen
+# --
+Then(/^ $0 $/) do
+
+end

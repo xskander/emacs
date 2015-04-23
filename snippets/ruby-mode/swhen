@@ -1,0 +1,7 @@
+# -*- mode: snippet -*-
+# name: when step
+# key: swhen
+# --
+When(/^ $0 $/) do
+
+end

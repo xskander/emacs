@@ -163,3 +163,11 @@
 
 ;;set command history mode
 (setq command-history-mode t)
+
+
+;; kill buffer withou prompting
+(defun volatile-kill-buffer ()
+   "Kill current buffer unconditionally."
+   (interactive)
+   (let ((buffer-modified-p nil))
+     (kill-buffer (current-buffer))))

@@ -1,0 +1,7 @@
+# -*- mode: snippet -*-
+# name: give step
+# key: sgiven
+# --
+Given(/^ $0 $/) do
+
+end
