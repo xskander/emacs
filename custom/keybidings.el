@@ -19,14 +19,8 @@
 ;;magit
 (global-set-key (kbd "C-c g") 'magit-status)
 
-;;fiplr
-(global-set-key (kbd "C-c f") 'fiplr-find-file)
-
 ;;switch window
 (global-set-key (kbd "C-x o") 'switch-window)
-
-;; clear whitespace
-(global-set-key (kbd "C-x w") 'whitespace-cleanup)
 
 ;;kill all buffers
 (global-set-key (kbd "C-x d") 'nuke-all-buffers)
@@ -36,12 +30,18 @@
 (global-set-key (kbd "C-x p") 'er/mark-inside-pairs)
 (global-set-key (kbd "C-x r") 'er/expand-region)
 
-;; Frames
-(global-set-key (kbd "C-c n") 'new-frame)
-(global-set-key (kbd "C-c o") 'other-frame)
-
-;; Command History
-(global-set-key (kbd "C-c h") 'command-history)
-
 ;; kill current buffer
 (global-set-key (kbd "C-x k") 'volatile-kill-buffer)
+
+;; unbond ctrl z
+(global-unset-key (kbd "C-z"))
+(global-unset-key (kbd "C-x C-z"))
+
+;; flyspell-buffer
+(global-unset-key (kbd "C-x f"))
+(global-set-key (kbd "C-x f") 'flyspell-buffer)
+
+;; unset lower and uppercase
+(global-unset-key (kbd "M-l"))
+(global-unset-key (kbd "M-u"))
+(global-unset-key (kbd "M-c"))
