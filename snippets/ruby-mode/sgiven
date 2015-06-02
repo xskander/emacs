@@ -2,6 +2,6 @@
 # name: give step
 # key: sgiven
 # --
-Given(/^ $0 $/) do
+Given(/^$0$/) do
 
 end

@@ -2,6 +2,6 @@
 # name: when step
 # key: swhen
 # --
-When(/^ $0 $/) do
+When(/^$0$/) do
 
 end
