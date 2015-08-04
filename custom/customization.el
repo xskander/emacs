@@ -89,3 +89,23 @@
 
 ;; Flymake configuration
 (add-hook 'enh-ruby-mode-hook 'flycheck-mode)
+
+;; magit prevent data loss
+(setq magit-auto-revert-mode nil)
+(setq magit-last-seen-setup-instructions "1.4.0")
+
+;; load theme zenburn
+(load-theme 'zenburn t)
+
+;; remove menu bar
+(menu-bar-mode -1)
+
+;; set web mode indentations
+(setq web-mode-markup-indent-offset 2)
+
+;; set syntax colors in css files
+(add-hook 'css-mode-hook 'xah-syntax-color-hex)
+(add-hook 'html-mode-hook 'xah-syntax-color-hex)
+
+;; prevent total anihilation
+(setq delete-by-moving-to-trash t)

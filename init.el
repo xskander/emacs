@@ -1,12 +1,14 @@
 ;;load paths
 (add-to-list 'load-path "~/.emacs.d/custom")
 (add-to-list 'load-path "~/.emacs.d/vendors")
+(add-to-list 'custom-theme-load-path "~/.emacs.d/themes")
 
 ;;initialize packages
 (when (>= emacs-major-version 24)
   (require 'package)
   (package-initialize)
   (add-to-list 'package-archives '("melpa" . "http://melpa.milkbox.net/packages/") t)
+  (add-to-list 'package-archives '("marmalade" . "http://marmalade-repo.org/packages/") t)
   )
 
 (package-initialize)
@@ -16,7 +18,6 @@
             'multiple-cursors
             'rvm
             'highlight-indentation
-            'color-theme-solarized
             'projectile-rails
             'switch-window
             'git-commit-mode
@@ -32,6 +33,7 @@
             'coffee-mode
             'expand-region
             'yasnippet
+            'zenburn-theme
             'flycheck))
 
 (dolist (package my-required-packages)

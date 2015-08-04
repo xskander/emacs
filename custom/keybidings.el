@@ -45,3 +45,6 @@
 (global-unset-key (kbd "M-l"))
 (global-unset-key (kbd "M-u"))
 (global-unset-key (kbd "M-c"))
+
+;; bundle-open
+(global-set-key (kbd "C-x a") 'bundle-open)

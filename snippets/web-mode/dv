@@ -1,0 +1,7 @@
+# -*- mode: snippet -*-
+# name: div
+# key: dv
+# --
+<div class="${1:}">
+  ${2:}
+</div>

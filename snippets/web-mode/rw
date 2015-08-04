@@ -1,0 +1,6 @@
+# -*- mode: snippet -*-
+# name: row
+# key: rw
+# --
+.row
+  $0

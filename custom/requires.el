@@ -24,5 +24,8 @@
 (require 'feature-mode)
 (add-to-list 'auto-mode-alist '("\.feature$" . feature-mode))
 
-;;expand region
+;; expand region
 (require 'expand-region)
+
+;; bundler
+(require 'bundler)

@@ -1,0 +1,6 @@
+# -*- mode: snippet -*-
+# name: small-12
+# key: s2
+# --
+.small-12.columns
+  $0
