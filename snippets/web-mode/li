@@ -1,0 +1,7 @@
+# -*- mode: snippet -*-
+# name: li
+# key: li
+# --
+<li class="${1:}">
+ ${2:}
+</li>
