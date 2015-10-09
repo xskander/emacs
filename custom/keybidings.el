@@ -48,3 +48,6 @@
 
 ;; bundle-open
 (global-set-key (kbd "C-x a") 'bundle-open)
+
+;; coffee compile buffer
+(global-set-key (kbd "C-x c") 'coffee-compile-buffer)

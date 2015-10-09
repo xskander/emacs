@@ -29,3 +29,6 @@
 
 ;; bundler
 (require 'bundler)
+
+;; multiple cursors
+(require 'multiple-cursors)
