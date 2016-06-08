@@ -1,0 +1,5 @@
+# -*- mode: snippet -*-
+# name: console.info with string
+# key: cis
+# --
+console.info("$1 " + $2)

@@ -1,0 +1,5 @@
+# -*- mode: snippet -*-
+# name: inline span
+# key: spi
+# --
+<span class="${1:}">${2:}</span>

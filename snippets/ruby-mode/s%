@@ -2,4 +2,4 @@
 # name: step
 # key: s%
 # --
-step %{$0}
+step %($0)

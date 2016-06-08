@@ -1,0 +1,7 @@
+# -*- mode: snippet -*-
+# name: span
+# key: sp
+# --
+<span class="${1:}">
+  ${2:}
+</span>

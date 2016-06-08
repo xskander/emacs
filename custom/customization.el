@@ -18,6 +18,7 @@
 (add-to-list 'auto-mode-alist '("\\.gemspec$" . enh-ruby-mode))
 (add-to-list 'auto-mode-alist '("\\.ru$" . enh-ruby-mode))
 (add-to-list 'auto-mode-alist '("Gemfile$" . enh-ruby-mode))
+;; (add-to-list 'auto-mode-alist '("\\_steps.rb$" . steps-ruby-mode))
 
 ;; indentation
 (setq-default indent-tabs-mode nil)
@@ -63,9 +64,6 @@
             (setq indent-tabs-mode nil)
             (define-key haml-mode-map "\C-m" 'newline-and-indent)))
 
-;; css mode for scss files
-(add-to-list 'auto-mode-alist '("\\.scss\\'" . css-mode))
-
 ;;js mode for coffe script files
 (add-to-list 'auto-mode-alist '("\\.js.erb\\'" . js-mode))
 
@@ -88,7 +86,7 @@
 (add-hook 'find-file-hooks 'turn-on-flyspell)
 
 ;; Flymake configuration
-(add-hook 'enh-ruby-mode-hook 'flycheck-mode)
+;; (global-flycheck-mode)
 
 ;; magit prevent data loss
 (setq magit-auto-revert-mode nil)
@@ -109,3 +107,11 @@
 
 ;; prevent total anihilation
 (setq delete-by-moving-to-trash t)
+
+;; scss mode
+(autoload 'scss-mode "scss-mode")
+(add-to-list 'auto-mode-alist '("\\.scss\\'" . scss-mode))
+
+;; ;; Custom steps configuration
+;; (add-hook 'steps-ruby-mode 'flycheck-mode)
+;; (add-hook 'steps-ruby-mode 'ruby-mode)

@@ -28,6 +28,7 @@
             'rspec-mode
             'feature-mode
             'web-mode
+            'scss-mode
             'haml-mode
             'slim-mode
             'coffee-mode

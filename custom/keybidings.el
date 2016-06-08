@@ -51,3 +51,9 @@
 
 ;; coffee compile buffer
 (global-set-key (kbd "C-x c") 'coffee-compile-buffer)
+
+;; copy line in one command
+(global-set-key "\C-c\M-w" 'copy-line)
+
+;; cut line in one command
+(global-set-key "\C-c\C-w" 'quick-cut-line)
