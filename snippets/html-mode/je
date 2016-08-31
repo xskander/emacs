@@ -1,0 +1,5 @@
+# -*- mode: snippet -*-
+# name: jekyll execute
+# key: je
+# --
+{% $0 %}

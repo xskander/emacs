@@ -1,0 +1,5 @@
+# -*- mode: snippet -*-
+# name: expect not to
+# key: expect_not
+# --
+expect(${1:}).not_to eq(${2:})
