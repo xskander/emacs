@@ -1,8 +1,8 @@
 ;;set CTRL H for backward
 (global-set-key [(control h)] 'delete-backward-char)
 
-;;set CTRL Q for ack search
-(global-set-key [(control q)] 'ack-and-a-half)
+;;set CTRL Q for rgrep search
+(global-set-key [(control q)] 'rgrep)
 
 ;;unset ido buffers
 (global-unset-key "\C-x\C-b")
@@ -37,9 +37,9 @@
 (global-unset-key (kbd "C-z"))
 (global-unset-key (kbd "C-x C-z"))
 
-;; flyspell-buffer
-(global-unset-key (kbd "C-x f"))
-(global-set-key (kbd "C-x f") 'flyspell-buffer)
+;; ;; flyspell-buffer
+;; (global-unset-key (kbd "C-x f"))
+;; (global-set-key (kbd "C-x f") 'flyspell-buffer)
 
 ;; unset lower and uppercase
 (global-unset-key (kbd "M-l"))
@@ -57,3 +57,6 @@
 
 ;; cut line in one command
 (global-set-key "\C-c\C-w" 'quick-cut-line)
+
+;; enable global flycheck mode
+(global-set-key "\C-c\C-f" 'global-flycheck-mode)

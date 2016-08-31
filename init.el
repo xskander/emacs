@@ -31,10 +31,13 @@
             'scss-mode
             'haml-mode
             'slim-mode
+            'php-mode
             'coffee-mode
             'expand-region
             'yasnippet
+            'yaml-mode
             'zenburn-theme
+            'elm-mode
             'flycheck))
 
 (dolist (package my-required-packages)

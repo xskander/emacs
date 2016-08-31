@@ -115,3 +115,23 @@
 ;; ;; Custom steps configuration
 ;; (add-hook 'steps-ruby-mode 'flycheck-mode)
 ;; (add-hook 'steps-ruby-mode 'ruby-mode)
+
+;; Php Mode
+(autoload 'php-mode "php-mode" "Major mode for editing php code." t)
+(add-to-list 'auto-mode-alist '("\\.php$" . php-mode))
+(add-to-list 'auto-mode-alist '("\\.inc$" . php-mode))
+
+
+(eval-after-load 'grep
+  '(progn
+     (add-to-list 'grep-find-ignored-directories "public")
+     (add-to-list 'grep-find-ignored-directories "coverage")
+     (add-to-list 'grep-find-ignored-directories "tmp")
+     (add-to-list 'grep-find-ignored-directories "spec/fixtures")
+     (add-to-list 'grep-find-ignored-directories "log")))
+(add-hook 'grep-mode-hook (lambda () (toggle-truncate-lines 1)))
+
+;; Star Yaml Mode
+(add-hook 'yaml-mode-hook
+  (lambda ()
+    (define-key yaml-mode-map "\C-m" 'newline-and-indent)))
