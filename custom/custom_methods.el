@@ -15,7 +15,7 @@
      if (equal d root)
      return nil)))
 
-
+;; Split window method
 (defadvice split-window (after move-point-to-new-window activate)
   "Moves the point to the newly created window after splitting."
   (other-window 1))

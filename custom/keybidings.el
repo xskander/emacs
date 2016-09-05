@@ -37,10 +37,6 @@
 (global-unset-key (kbd "C-z"))
 (global-unset-key (kbd "C-x C-z"))
 
-;; ;; flyspell-buffer
-;; (global-unset-key (kbd "C-x f"))
-;; (global-set-key (kbd "C-x f") 'flyspell-buffer)
-
 ;; unset lower and uppercase
 (global-unset-key (kbd "M-l"))
 (global-unset-key (kbd "M-u"))

@@ -14,7 +14,6 @@
 (package-initialize)
 (setq my-required-packages
       (list 'magit
-            'ack-and-a-half
             'multiple-cursors
             'rvm
             'highlight-indentation
@@ -29,9 +28,7 @@
             'feature-mode
             'web-mode
             'scss-mode
-            'haml-mode
             'slim-mode
-            'php-mode
             'coffee-mode
             'expand-region
             'yasnippet

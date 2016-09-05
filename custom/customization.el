@@ -7,9 +7,6 @@
 ;;line number mode
 (global-linum-mode t)
 
-;; themes
-(load-theme 'solarized-dark t)
-
 ;;enh ruby mode for ruby code verification
 (autoload 'enh-ruby-mode "enh-ruby-mode" "Major mode for ruby files" t)
 (add-to-list 'auto-mode-alist '("\\.rb$" . enh-ruby-mode))
@@ -18,7 +15,6 @@
 (add-to-list 'auto-mode-alist '("\\.gemspec$" . enh-ruby-mode))
 (add-to-list 'auto-mode-alist '("\\.ru$" . enh-ruby-mode))
 (add-to-list 'auto-mode-alist '("Gemfile$" . enh-ruby-mode))
-;; (add-to-list 'auto-mode-alist '("\\_steps.rb$" . steps-ruby-mode))
 
 ;; indentation
 (setq-default indent-tabs-mode nil)
@@ -52,17 +48,8 @@
 ;;disable auto searching
 (setq ido-auto-merge-delay-time 99999)
 
-;;ack setup
-(setq ack-and-a-half-prompt-for-directory t)
-
 ;;final newline
 (setq require-final-newline t)
-
-;;haml mode
-(add-hook 'haml-mode-hook
-          (lambda ()
-            (setq indent-tabs-mode nil)
-            (define-key haml-mode-map "\C-m" 'newline-and-indent)))
 
 ;;js mode for coffe script files
 (add-to-list 'auto-mode-alist '("\\.js.erb\\'" . js-mode))
@@ -70,7 +57,6 @@
 ;; start web-mode for .erb files
 (add-to-list 'auto-mode-alist '("\\.erb\\'" . web-mode))
 (setq x-alt-keysym 'meta)
-
 
 ;; snipets
 (setq yas-snippet-dirs
@@ -84,9 +70,6 @@
 ;; Flyspeel Configurations
 ;; (add-hook 'after-init-hook 'flyspell-mode)
 (add-hook 'find-file-hooks 'turn-on-flyspell)
-
-;; Flymake configuration
-;; (global-flycheck-mode)
 
 ;; magit prevent data loss
 (setq magit-auto-revert-mode nil)
@@ -112,16 +95,7 @@
 (autoload 'scss-mode "scss-mode")
 (add-to-list 'auto-mode-alist '("\\.scss\\'" . scss-mode))
 
-;; ;; Custom steps configuration
-;; (add-hook 'steps-ruby-mode 'flycheck-mode)
-;; (add-hook 'steps-ruby-mode 'ruby-mode)
-
-;; Php Mode
-(autoload 'php-mode "php-mode" "Major mode for editing php code." t)
-(add-to-list 'auto-mode-alist '("\\.php$" . php-mode))
-(add-to-list 'auto-mode-alist '("\\.inc$" . php-mode))
-
-
+;; Grep search ignore folder
 (eval-after-load 'grep
   '(progn
      (add-to-list 'grep-find-ignored-directories "public")

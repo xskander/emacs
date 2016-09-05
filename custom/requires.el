@@ -32,3 +32,6 @@
 
 ;; multiple cursors
 (require 'multiple-cursors)
+
+;; elm mode
+(require 'elm-mode)
