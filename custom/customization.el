@@ -75,6 +75,9 @@
 (setq magit-auto-revert-mode nil)
 (setq magit-last-seen-setup-instructions "1.4.0")
 
+;; themes
+;; (load-theme 'solarized-dark t)
+
 ;; load theme zenburn
 (load-theme 'zenburn t)
 
@@ -109,3 +112,7 @@
 (add-hook 'yaml-mode-hook
   (lambda ()
     (define-key yaml-mode-map "\C-m" 'newline-and-indent)))
+
+;; Dash
+(autoload 'dash-at-point "dash-at-point"
+  "Search the word at point with Dash." t nil)

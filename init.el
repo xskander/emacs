@@ -35,6 +35,7 @@
             'yaml-mode
             'zenburn-theme
             'elm-mode
+            'dash-at-point
             'flycheck))
 
 (dolist (package my-required-packages)

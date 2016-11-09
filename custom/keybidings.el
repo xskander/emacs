@@ -56,3 +56,7 @@
 
 ;; enable global flycheck mode
 (global-set-key "\C-c\C-f" 'global-flycheck-mode)
+
+;; dash
+(global-set-key "\C-cd" 'dash-at-point)
+(global-set-key "\C-ce" 'dash-at-point-with-docset)
