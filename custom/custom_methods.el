@@ -72,3 +72,10 @@ When using Homebrew, install it using \"brew install trash\"."
     (delete-region beg end))
   (beginning-of-line 1)
     (setq this-command 'quick-cut-line))
+
+;; git extract number
+(defun git-extract-number-from-branch-name ()
+  (interactive)
+  (let ((current-branch-name (magit-get-current-branch)))
+    (progn (string-match "[\w]*\/\\([0-9A-Za-z\-]+\\)" current-branch-name)
+           (insert (concat "[" (match-string 1 current-branch-name) "] ")))))
