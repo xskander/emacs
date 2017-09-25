@@ -20,11 +20,11 @@
 ;; disable auto searching
 (setq ido-auto-merge-delay-time 99999)
 
-;; snipets
-(setq yas-snippet-dirs
-      '("~/.emacs.d/snippets"
-        ))
-(yas-global-mode 1)
+;; yas snippet
+(require 'yasnippet)
+(setq yas/root-directory "~/.emacs.d/snippets")
+(yas/load-directory yas/root-directory)
+(yas/global-mode t)
 
 ;; Kill whitespace on save
 (add-hook 'before-save-hook 'delete-trailing-whitespace)
@@ -55,3 +55,7 @@
      (add-to-list 'grep-find-ignored-directories "spec/fixtures")
      (add-to-list 'grep-find-ignored-directories "log")))
 (add-hook 'grep-mode-hook (lambda () (toggle-truncate-lines 1)))
+
+
+;; elixir
+(add-to-list 'auto-mode-alist '("\\.elixir2\\'" . elixir-mode))

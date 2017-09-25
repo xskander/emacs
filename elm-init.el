@@ -2,6 +2,7 @@
 (add-to-list 'load-path "~/.emacs.d/custom")
 (add-to-list 'load-path "~/.emacs.d/elm")
 (add-to-list 'load-path "~/.emacs.d/vendors")
+(add-to-list 'load-path "~/.emacs.d/vendors/gulp")
 
 ;;initialize packages
 (when (>= emacs-major-version 24)

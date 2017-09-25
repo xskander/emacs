@@ -31,10 +31,12 @@
             'slim-mode
             'coffee-mode
             'expand-region
-            'yasnippet
+            'yasnippet-bundle
             'yaml-mode
             'zenburn-theme
             'dash-at-point
+            'elixir-mode
+            'alchemist
             'flycheck))
 
 (dolist (package my-required-packages)

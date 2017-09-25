@@ -5,3 +5,4 @@
 /.mc-lists.el
 *.DS_Store
 /bookmarks
+/vendors/.DS_Store

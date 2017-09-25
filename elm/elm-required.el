@@ -1,3 +1,6 @@
+;; Require elm
+(require 'elm-mode)
+
 ;; Switch windows
 (require 'switch-window)
 
@@ -10,3 +13,6 @@
 
 ;; multiple cursors
 (require 'multiple-cursors)
+
+;; gulp
+(require 'gulpjs)

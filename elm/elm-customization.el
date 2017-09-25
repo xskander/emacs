@@ -11,3 +11,9 @@
 
 ;; final newline
 (setq require-final-newline t)
+
+;; oracle auto completion
+(add-hook 'elm-mode-hook #'elm-oracle-setup-completion)
+
+;; autoload gulpjs
+(autoload 'gulpjs-start-task "gulpjs" "Start a gulp task." t)
