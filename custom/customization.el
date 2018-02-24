@@ -56,6 +56,6 @@
      (add-to-list 'grep-find-ignored-directories "log")))
 (add-hook 'grep-mode-hook (lambda () (toggle-truncate-lines 1)))
 
-
-;; elixir
-(add-to-list 'auto-mode-alist '("\\.elixir2\\'" . elixir-mode))
+;; projectile rails
+(add-hook 'projectile-mode-hook 'projectile-rails-on)
+(projectile-global-mode)

@@ -22,10 +22,6 @@
 ;; format linum
 (setq linum-format "%4d ")
 
-;; projectile rails
-(add-hook 'projectile-mode-hook 'projectile-rails-on)
-(projectile-global-mode)
-
 ;; activate corespunding ruby
 (rvm-activate-corresponding-ruby)
 
