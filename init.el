@@ -31,7 +31,7 @@
             'slim-mode
             'coffee-mode
             'expand-region
-            'yasnippet-bundle
+            'yasnippet
             'yaml-mode
             'zenburn-theme
             'dash-at-point
