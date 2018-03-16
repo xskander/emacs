@@ -20,12 +20,6 @@
 ;; disable auto searching
 (setq ido-auto-merge-delay-time 99999)
 
-;; yas snippet
-(require 'yasnippet)
-(setq yas/root-directory "~/.emacs.d/snippets")
-(yas/load-directory yas/root-directory)
-(yas/global-mode t)
-
 ;; Kill whitespace on save
 (add-hook 'before-save-hook 'delete-trailing-whitespace)
 
@@ -59,3 +53,12 @@
 ;; projectile rails
 (add-hook 'projectile-mode-hook 'projectile-rails-on)
 (projectile-global-mode)
+(setq projectile-rails-expand-snippet nil)
+
+;; yas snippet
+(add-to-list 'load-path
+             "~/.emacs.d/snippet")
+(require 'yasnippet)
+(yas-global-mode 1)
+(yas-reload-all)
+(add-hook 'prog-mode-hook #'yas-minor-mode)
