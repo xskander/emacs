@@ -38,9 +38,6 @@
 (add-hook 'css-mode-hook 'xah-syntax-color-hex)
 (add-hook 'html-mode-hook 'xah-syntax-color-hex)
 
-;; prevent total anihilation
-(setq delete-by-moving-to-trash t)
-
 ;; Grep search ignore folder
 (eval-after-load 'grep
   '(progn
@@ -50,11 +47,6 @@
      (add-to-list 'grep-find-ignored-directories "spec/fixtures")
      (add-to-list 'grep-find-ignored-directories "log")))
 (add-hook 'grep-mode-hook (lambda () (toggle-truncate-lines 1)))
-
-;; projectile rails
-(add-hook 'projectile-mode-hook 'projectile-rails-on)
-(projectile-global-mode)
-(setq projectile-rails-expand-snippet nil)
 
 ;; yas snippet
 (add-to-list 'load-path
@@ -67,9 +59,6 @@
 ;; helm setup
 (custom-set-variables
  '(helm-ag-ignore-buffer-patterns '("\\.min.js\\'" "\\.log\\'" "\\.min.css\\'")))
-
-(timeclock-mode-line-display t)
-(display-time-mode t)
 
 (setq mode-line-modes
       (mapcar (lambda (elem)

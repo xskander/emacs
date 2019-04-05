@@ -1,5 +1,4 @@
 ;;; rails-customization.el -- customization calls
-
 ;; remove enconding from top of file
 (setq enh-ruby-add-encoding-comment-on-save nil)
 
@@ -96,3 +95,9 @@
     (when (and eslint (file-executable-p eslint))
       (setq-local flycheck-javascript-eslint-executable eslint))))
 (add-hook 'flycheck-mode-hook #'my/use-eslint-from-node-modules)
+
+;; projectile rails
+(projectile-mode +1)
+(define-key projectile-mode-map (kbd "C-c p") 'projectile-command-map)
+(projectile-rails-global-mode 1)
+(setq projectile-rails-expand-snippet nil)

@@ -7,6 +7,8 @@
 ;; unset backspace and enter
 (global-set-key (kbd "<return>") 'ignore)
 (global-set-key (kbd "<backspace>") 'ignore)
+(global-set-key [backspace] 'other-window)
+(global-set-key [return] 'other-window)
 
 ;; unbond ctrl z
 (global-unset-key (kbd "C-z"))
@@ -54,10 +56,4 @@
 (global-set-key (kbd "C-x r") 'er/expand-region)
 
 (global-set-key (kbd "C-c h") 'helm-ag-project-root)
-
-;; try timecop keeping
-(global-set-key (kbd "C-c C-t s") 'timeclock-in)
-(global-set-key (kbd "C-c C-t f") 'timeclock-out)
-(global-set-key (kbd "C-c C-t l") 'timeclock-visit-timelog)
-(global-set-key (kbd "C-c C-t r") 'timeclock-reread-log)
 ;;; Keybinding Ends here
