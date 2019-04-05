@@ -21,10 +21,6 @@
             'highlight-indentation
             'projectile-rails
             'switch-window
-            'git-commit-mode
-            'git-rebase-mode
-            'gitconfig-mode
-            'gitignore-mode
             'enh-ruby-mode
             'rspec-mode
             'feature-mode
