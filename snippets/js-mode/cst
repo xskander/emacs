@@ -1,0 +1,8 @@
+# -*- mode: snippet -*-
+# name: constructor
+# key: cst
+# --
+constructor(props) {
+  super(props)
+  $0
+}

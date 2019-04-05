@@ -24,12 +24,18 @@
 (global-set-key [(control q)] 'rgrep)
 
 ;; multiple lines
-(global-set-key (kbd "C-c C-n") 'mc/mark-next-like-this)
-(global-set-key (kbd "C-c C-p") 'mc/mark-previous-like-this)
-(global-set-key (kbd "C-c C-a") 'mc/mark-all-like-this)
+(global-set-key (kbd "C-c C-x n") 'mc/mark-next-like-this)
+(global-set-key (kbd "C-c C-x p") 'mc/mark-previous-like-this)
+(global-set-key (kbd "C-c C-x a") 'mc/mark-all-like-this)
+
+;; multiple lines
+(global-set-key (kbd "C-c C-k a") 'mc/mark-all-like-this)
 
 ;; magit
 (global-set-key (kbd "C-c g") 'magit-status)
+
+;; magit extract number from branch
+(global-set-key (kbd "C-c m") 'git-extract-number-from-branch-name)
 
 ;; switch window
 (global-set-key (kbd "C-x o") 'switch-window)
@@ -37,13 +43,21 @@
 ;; kill all buffers
 (global-set-key (kbd "C-x d") 'nuke-all-buffers)
 
+;; kill current buffer
+(global-set-key (kbd "C-x k") 'volatile-kill-buffer)
+;; build new empty buffer for different stuff
+(global-set-key (kbd "C-x n") 'xah-new-empty-buffer)
+
 ;; expand region
 (global-set-key (kbd "C-x q") 'er/mark-inside-quotes)
 (global-set-key (kbd "C-x p") 'er/mark-inside-pairs)
 (global-set-key (kbd "C-x r") 'er/expand-region)
 
-;; kill current buffer
-(global-set-key (kbd "C-x k") 'volatile-kill-buffer)
+(global-set-key (kbd "C-c h") 'helm-ag-project-root)
 
-;; magit extract number from branch
-(global-set-key (kbd "C-c m") 'git-extract-number-from-branch-name)
+;; try timecop keeping
+(global-set-key (kbd "C-c C-t s") 'timeclock-in)
+(global-set-key (kbd "C-c C-t f") 'timeclock-out)
+(global-set-key (kbd "C-c C-t l") 'timeclock-visit-timelog)
+(global-set-key (kbd "C-c C-t r") 'timeclock-reread-log)
+;;; Keybinding Ends here

@@ -1,3 +1,5 @@
+;;; init.el -- The begining of my emacs setup
+
 ;; load paths
 (add-to-list 'load-path "~/.emacs.d/custom")
 (add-to-list 'load-path "~/.emacs.d/vendors")
@@ -34,9 +36,15 @@
             'yasnippet
             'yaml-mode
             'zenburn-theme
-            'dash-at-point
             'elixir-mode
             'alchemist
+            'dumb-jump
+            'helm-ag
+            'js2-mode
+            'json-mode
+            'exec-path-from-shell
+            'rjsx-mode
+            's
             'flycheck))
 
 (dolist (package my-required-packages)

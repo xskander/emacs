@@ -1,3 +1,6 @@
+;;; package - custom-methods
+";;; Commentary: This file keep custom methods to help do different things"
+
 ;; kill buffer withou prompting
 (defun volatile-kill-buffer ()
   "Kill current buffer unconditionally."
@@ -79,3 +82,21 @@ When using Homebrew, install it using \"brew install trash\"."
   (let ((current-branch-name (magit-get-current-branch)))
     (progn (string-match "[\w]*\/\\([0-9A-Za-z\-]+\\)" current-branch-name)
            (insert (concat "[" (match-string 1 current-branch-name) "] ")))))
+
+(defun xah-new-empty-buffer ()
+  "Create a new empty buffer.
+New buffer will be named “untitled” or “untitled<2>”, “untitled<3>”, etc.
+
+It returns the buffer (for elisp programing).
+
+URL `http://ergoemacs.org/emacs/emacs_new_empty_buffer.html'
+Version 2017-11-01"
+  (interactive)
+  (let (($buf (generate-new-buffer "untitled")))
+    (switch-to-buffer $buf)
+    (funcall initial-major-mode)
+    (setq buffer-offer-save t)
+    $buf
+    ))
+
+;;; Custom methods ends here

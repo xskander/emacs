@@ -1,0 +1,5 @@
+# -*- mode: snippet -*-
+# name: const { something } = this.props;
+# key: constp
+# --
+const { $1 } = this.$2

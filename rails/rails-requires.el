@@ -1,3 +1,6 @@
+;; Flycheck
+(require 'flycheck)
+
 ;; Highlight indentation
 (require 'highlight-indentation)
 (add-hook 'enh-ruby-mode-hook
@@ -17,5 +20,10 @@
 (require 'feature-mode)
 (add-to-list 'auto-mode-alist '("\.feature$" . feature-mode))
 
-;; bundler
-(require 'bundler)
+(require 'helm-ag)
+
+;; rjsx-mode for react
+(add-to-list 'auto-mode-alist '("components\\/.*\\.js\\'" . rjsx-mode))
+(add-to-list 'auto-mode-alist '("app/javascript\\/.*\\.js\\'" . rjsx-mode))
+(add-to-list 'auto-mode-alist '("components\\/.*\\.jsx\\'" . rjsx-mode))
+(add-to-list 'auto-mode-alist '("app/javascript\\/.*\\.jsx\\'" . rjsx-mode))

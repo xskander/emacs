@@ -1,0 +1,5 @@
+# -*- mode: snippet -*-
+# name: console.group
+# key: cg
+# --
+console.group($0)

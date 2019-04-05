@@ -1,0 +1,5 @@
+# -*- mode: snippet -*-
+# name: class Something extends React.PureComponent
+# key: cls
+# --
+class $0 extends React.PureComponent {}

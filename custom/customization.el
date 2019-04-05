@@ -1,4 +1,5 @@
-;; prevent backup files
+;;; package --- customization.el
+";;; Commentary: This helps customize the whole of emacs"
 (setq make-backup-files nil)
 
 ;; ido mode for buffers
@@ -62,3 +63,18 @@
 (yas-global-mode 1)
 (yas-reload-all)
 (add-hook 'prog-mode-hook #'yas-minor-mode)
+
+;; helm setup
+(custom-set-variables
+ '(helm-ag-ignore-buffer-patterns '("\\.min.js\\'" "\\.log\\'" "\\.min.css\\'")))
+
+(timeclock-mode-line-display t)
+(display-time-mode t)
+
+(setq mode-line-modes
+      (mapcar (lambda (elem)
+                (pcase elem
+                  (`(:propertize (,_ minor-mode-alist . ,_) . ,_)
+                   "")
+                  (t elem)))
+              mode-line-modes))
