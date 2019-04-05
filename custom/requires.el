@@ -10,3 +10,5 @@
 
 ;; multiple cursors
 (require 'multiple-cursors)
+
+(setq debug-on-error t)

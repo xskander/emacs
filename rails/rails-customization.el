@@ -53,7 +53,7 @@
     (define-key yaml-mode-map "\C-m" 'newline-and-indent)))
 
 ;; helm-ag base default project
-(setq dumb-jump-default-project "~/workspace/RepairPal")
+;; (setq dumb-jump-default-project "~/workspace/RepairPal")
 
 ;; use web-mode for .jsx files
 (add-to-list 'auto-mode-alist '("\\.jsx$" . rjsx-mode))

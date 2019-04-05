@@ -8,20 +8,10 @@
   (let ((buffer-modified-p nil))
     (kill-buffer (current-buffer))))
 
-;; Find root directory by searching for Gemfile
-(defun* get-closest-gemfile-root (&optional (file "Gemfile"))
-  (let ((root (expand-file-name "/")))
-    (loop
-     for d = default-directory then (expand-file-name ".." d)
-     if (file-exists-p (expand-file-name file d))
-     return d
-     if (equal d root)
-     return nil)))
-
 ;; Split window method
-(defadvice split-window (after move-point-to-new-window activate)
-  "Moves the point to the newly created window after splitting."
-  (other-window 1))
+;; (defadvice split-window (after move-point-to-new-window activate)
+;;   "Moves the point to the newly created window after splitting."
+;;   (other-window 1))
 
 ;;nuke all buffers
 (defun nuke-all-buffers ()
@@ -48,6 +38,8 @@ Version 2015-06-11"
   (font-lock-fontify-buffer))
 
 ;; move files to trash not into the ether
+(setq delete-by-moving-to-trash t)
+(setq trash-directory "~/.Trash")
 (defun system-move-file-to-trash (file)
     "Use \"trash\" to move FILE to the system trash.
 When using Homebrew, install it using \"brew install trash\"."
