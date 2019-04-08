@@ -67,3 +67,5 @@
                    "")
                   (t elem)))
               mode-line-modes))
+
+(setq magit-push-current-set-remote-if-missing nil)
