@@ -1,4 +1,3 @@
-Test
 Emacs basic setup
 
 ## Installation
