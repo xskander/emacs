@@ -90,5 +90,3 @@ Version 2017-11-01"
     (setq buffer-offer-save t)
     $buf
     ))
-
-;;; Custom methods ends here
