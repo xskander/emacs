@@ -12,6 +12,8 @@
 ;; (defadvice split-window (after move-point-to-new-window activate)
 ;;   "Moves the point to the newly created window after splitting."
 ;;   (other-window 1))
+(global-set-key "\C-x2" (lambda () (interactive)(split-window-vertically) (other-window 1)))
+(global-set-key "\C-x3" (lambda () (interactive)(split-window-horizontally) (other-window 1)))
 
 ;;nuke all buffers
 (defun nuke-all-buffers ()
