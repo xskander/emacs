@@ -24,14 +24,15 @@ Emacs basic setup
 
 ## Keybindings
 
-** Magit **
+### Magit
 
 * ```C-c g``` - magit
 * ```C-x k``` - kill current buffer
 * ```C-x d``` - Kill all buffers
 * ```C-c m``` - Extract branch number
+* ```C-c n``` - Output 'not yet done' in case you want to commit something temporary
 
-** Navigation **
+### Navigation
 
 * ```C-x b``` - Buffer
 * ```C-x o``` - Switch window
@@ -40,7 +41,7 @@ Emacs basic setup
 * ```C-c p f``` - Fuzzy Search
 * ```C-c r [m/c/s/h/j]``` - Project search - m - model/c - controller...
 
-** Word Manipulation **
+### Word Manipulation
 
 * ```C-x q``` - Select inside quotes
 * ```C-x p``` - Select inside paranthesys
@@ -59,3 +60,10 @@ Emacs basic setup
 * ```C-x (``` - start macro
 * ```C-x )``` - end macro
 * ```M-0 C-x e``` - do macro till end of file
+
+### Rubocop - code checker
+> Please make sure you have everything setup or this might cause all sorts of issue.
+> Documentation - https://www.flycheck.org/en/latest/
+
+* ```C-c ! m``` - disable flycheck - for example on large files
+* ```C-c ! l``` - See flycheck output
