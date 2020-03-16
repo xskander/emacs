@@ -13,7 +13,6 @@
 ;; Mark all the things
 (global-set-key (kbd "C-c C-k a") 'mc/mark-all-like-this)
 
-
 ;; flycheck-mode - i keep having to close it
 (global-set-key (kbd "C-c ! m") 'flycheck-mode)
 

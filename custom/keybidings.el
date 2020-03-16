@@ -39,6 +39,9 @@
 ;; magit extract number from branch
 (global-set-key (kbd "C-c m") 'git-extract-number-from-branch-name)
 
+;; magit not yet done
+(global-set-key (kbd "C-c n") 'git-not-yet-done)
+
 ;; switch window
 (global-set-key (kbd "C-x o") 'switch-window)
 

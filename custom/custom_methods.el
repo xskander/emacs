@@ -77,6 +77,11 @@ When using Homebrew, install it using \"brew install trash\"."
     (progn (string-match "[\w]*\/\\([0-9A-Za-z\-]+\\)" current-branch-name)
            (insert (concat "[" (match-string 1 current-branch-name) "] ")))))
 
+;; git not yet done
+(defun git-not-yet-done ()
+  (interactive)
+  (progn (insert "not yet done")))
+
 (defun xah-new-empty-buffer ()
   "Create a new empty buffer.
 New buffer will be named “untitled” or “untitled<2>”, “untitled<3>”, etc.
