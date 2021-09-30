@@ -43,7 +43,6 @@
             'rjsx-mode
             'column-enforce-mode
             'no-easy-keys
-            'flycheck
             's))
 
 (dolist (package my-required-packages)

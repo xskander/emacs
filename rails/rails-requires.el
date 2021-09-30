@@ -29,4 +29,4 @@
 (add-to-list 'auto-mode-alist '("app/javascript\\/.*\\.jsx\\'" . rjsx-mode))
 
 ;; Flycheck mode for rubocop
-(global-flycheck-mode)
+;; (global-flycheck-mode)

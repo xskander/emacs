@@ -22,7 +22,7 @@
   (delete-other-windows))
 
 ;; turn on flyspell lambda method
-(defun turn-on-flyspell () (flyspell-mode 1))
+;; (defun turn-on-flyspell () (flyspell-mode 1))
 
 ;; set colors in css files
 (defun xah-syntax-color-hex ()
