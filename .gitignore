@@ -8,4 +8,5 @@
 /vendors/.DS_Store
 /network-security.data
 transient
+/eshell/lastdir
 tramp
