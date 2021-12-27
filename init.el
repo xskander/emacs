@@ -9,8 +9,8 @@
 (when (>= emacs-major-version 24)
   (setq gnutls-algorithm-priority "NORMAL:-VERS-TLS1.3")
   (require 'package)
-  (add-to-list 'package-archives '("melpa" . "http://melpa.milkbox.net/packages/") t)
-  (add-to-list 'package-archives '("marmalade" . "http://marmalade-repo.org/packages/") t)
+  (setq package-archive '((add-to-list 'package-archives '("melpa" . "https://melpa.org/packages/") t)
+			  (add-to-list 'package-archives '("marmalade" . "http://marmalade-repo.org/packages/"))))
   )
 
 (package-initialize)
@@ -41,7 +41,6 @@
             'exec-path-from-shell
             'rjsx-mode
             'column-enforce-mode
-            'no-easy-keys
             's))
 
 (dolist (package my-required-packages)
