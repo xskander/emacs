@@ -11,22 +11,8 @@
 (require 'rvm)
 (rvm-use-default)
 
-;; Rspec
-(require 'rspec-mode)
-(setq rspec-use-rake-when-possible nil)
-
-;; Feature mode
-(require 'feature-mode)
-(add-to-list 'auto-mode-alist '("\.feature$" . feature-mode))
-
-;; Helm used for searches
-(require 'helm-ag)
-
 ;; rjsx-mode for react
 (add-to-list 'auto-mode-alist '("components\\/.*\\.js\\'" . rjsx-mode))
 (add-to-list 'auto-mode-alist '("app/javascript\\/.*\\.js\\'" . rjsx-mode))
 (add-to-list 'auto-mode-alist '("components\\/.*\\.jsx\\'" . rjsx-mode))
 (add-to-list 'auto-mode-alist '("app/javascript\\/.*\\.jsx\\'" . rjsx-mode))
-
-;; Flycheck mode for rubocop
-;; (global-flycheck-mode)

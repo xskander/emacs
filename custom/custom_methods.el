@@ -21,9 +21,6 @@
   (mapcar 'kill-buffer (buffer-list))
   (delete-other-windows))
 
-;; turn on flyspell lambda method
-;; (defun turn-on-flyspell () (flyspell-mode 1))
-
 ;; set colors in css files
 (defun xah-syntax-color-hex ()
   "Syntax color text of the form 「#ff1100」 in current buffer.

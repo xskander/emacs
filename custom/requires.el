@@ -8,7 +8,7 @@
 ;; expand region
 (require 'expand-region)
 
-;; multiple cursors
+;; ;; multiple cursors
 (require 'multiple-cursors)
 
 (setq debug-on-error t)

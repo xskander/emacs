@@ -1,0 +1,5 @@
+# -*- mode: snippet -*-
+# name: const { variable } = method
+# key: constq
+# --
+const { $1 } = $2

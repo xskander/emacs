@@ -27,6 +27,7 @@
 ;; magit prevent data loss
 (setq magit-auto-revert-mode nil)
 (setq magit-last-seen-setup-instructions "1.4.0")
+(setq magit-push-current-set-remote-if-missing nil)
 
 ;; load theme zenburn
 (load-theme 'zenburn t)
@@ -57,8 +58,8 @@
 (add-hook 'prog-mode-hook #'yas-minor-mode)
 
 ;; helm setup
-(custom-set-variables
- '(helm-ag-ignore-buffer-patterns '("\\.min.js\\'" "\\.log\\'" "\\.min.css\\'")))
+;;(custom-set-variables
+;; '(helm-ag-ignore-buffer-patterns '("\\.min.js\\'" "\\.log\\'" "\\.min.css\\'")))
 
 (setq mode-line-modes
       (mapcar (lambda (elem)
@@ -68,4 +69,4 @@
                   (t elem)))
               mode-line-modes))
 
-(setq magit-push-current-set-remote-if-missing nil)
+
