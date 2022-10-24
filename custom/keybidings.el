@@ -59,4 +59,21 @@
 (global-set-key (kbd "C-x r") 'er/expand-region)
 
 (global-set-key (kbd "C-c h") 'helm-ag-project-root)
-;;; Keybinding Ends here
+
+;; Split window method
+(global-set-key "\C-x2" (lambda () (interactive)(split-window-vertically) (other-window 1)))
+(global-set-key "\C-x3" (lambda () (interactive)(split-window-horizontally) (other-window 1)))
+
+;; bundle-open
+(global-set-key (kbd "C-x a") 'bundle-open)
+
+;; copy line in one command
+(global-set-key "\C-c\M-w" 'copy-line)
+
+;; cut line in one command
+(global-set-key "\C-c\C-w" 'quick-cut-line)
+
+;; Mark all the things
+(global-set-key (kbd "C-c C-k a") 'mc/mark-all-like-this)
+;;;(provide 'keybindings.el)
+;;; keybindings.el ends here

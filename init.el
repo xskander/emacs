@@ -3,7 +3,6 @@
 ;; load paths
 (add-to-list 'load-path "~/.emacs.d/custom")
 (add-to-list 'load-path "~/.emacs.d/vendors")
-(add-to-list 'load-path "~/.emacs.d/rails")
 
 ;; initialize packages
 (require 'package)
@@ -18,7 +17,6 @@
             'prettier-js
 	          'rvm
             'web-mode
-	          'scss-mode
 	          'rjsx-mode
             'helm-ag
             'expand-region
@@ -33,16 +31,11 @@
     (package-refresh-contents)
     (package-install package)))
 
-;; ;; common stuff
+;; require all files from the custom folder
 (load "requires.el")
-(load "custom_methods.el")
+(load "methods.el")
 (load "keybidings.el")
 (load "customization.el")
-
-;; ;; rails specific stuff
-(load "rails-requires.el")
-(load "rails-keybidings.el")
-(load "rails-customization.el")
 
 (custom-set-variables
  ;; custom-set-variables was added by Custom.

@@ -1,26 +1,19 @@
-;;; package - custom-methods
-";;; Commentary: This file keep custom methods to help do different things"
+;;; package - methods
 
-;; kill buffer withou prompting
+;; nuke current buffer
 (defun volatile-kill-buffer ()
   "Kill current buffer unconditionally."
   (interactive)
   (let ((buffer-modified-p nil))
     (kill-buffer (current-buffer))))
 
-;; Split window method
-;; (defadvice split-window (after move-point-to-new-window activate)
-;;   "Moves the point to the newly created window after splitting."
-;;   (other-window 1))
-(global-set-key "\C-x2" (lambda () (interactive)(split-window-vertically) (other-window 1)))
-(global-set-key "\C-x3" (lambda () (interactive)(split-window-horizontally) (other-window 1)))
-
-;;nuke all buffers
+;; nuke all buffers
 (defun nuke-all-buffers ()
   (interactive)
   (mapcar 'kill-buffer (buffer-list))
   (delete-other-windows))
 
+;; set syntax colors in css files
 ;; set colors in css files
 (defun xah-syntax-color-hex ()
   "Syntax color text of the form 「#ff1100」 in current buffer.
@@ -37,8 +30,6 @@ Version 2015-06-11"
   (font-lock-fontify-buffer))
 
 ;; move files to trash not into the ether
-(setq delete-by-moving-to-trash t)
-(setq trash-directory "~/.Trash")
 (defun system-move-file-to-trash (file)
     "Use \"trash\" to move FILE to the system trash.
 When using Homebrew, install it using \"brew install trash\"."
@@ -79,14 +70,8 @@ When using Homebrew, install it using \"brew install trash\"."
   (interactive)
   (progn (insert "not yet done")))
 
+;;; Create empty bugger
 (defun xah-new-empty-buffer ()
-  "Create a new empty buffer.
-New buffer will be named “untitled” or “untitled<2>”, “untitled<3>”, etc.
-
-It returns the buffer (for elisp programing).
-
-URL `http://ergoemacs.org/emacs/emacs_new_empty_buffer.html'
-Version 2017-11-01"
   (interactive)
   (let (($buf (generate-new-buffer "untitled")))
     (switch-to-buffer $buf)
@@ -94,3 +79,5 @@ Version 2017-11-01"
     (setq buffer-offer-save t)
     $buf
     ))
+
+;;; methods ends here

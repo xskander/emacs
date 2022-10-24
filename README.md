@@ -29,6 +29,7 @@ Emacs basic setup
 * ```C-c g``` - magit
 * ```C-x k``` - kill current buffer
 * ```C-x d``` - Kill all buffers
+* ```C-x n``` - Create new empty buggers
 * ```C-c m``` - Extract branch number
 * ```C-c n``` - Output 'not yet done' in case you want to commit something temporary
 
