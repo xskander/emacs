@@ -3,6 +3,7 @@
 
 ;; no easy keys
 ;; disable enter/file in vendors
+(load "no-easy-keys.el")
 (require 'no-easy-keys)
 
 ;; expand region
@@ -96,14 +97,3 @@
 
 ;; start web-mode for .erb files
 (setq x-alt-keysym 'meta)
-
-;; projectile rails
-(setq projectile-rails-expand-snippet nil)
-
-;; ------------------------------ custom folder
-
-;; require no-easy-keys
-(load "no-easy-keys.el")
-
-;; require scss mode
-(load "scss-mode")

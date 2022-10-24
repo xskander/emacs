@@ -34,8 +34,8 @@
 ;; require all files from the custom folder
 (load "requires.el")
 (load "methods.el")
-(load "keybidings.el")
 (load "customization.el")
+(load "keybidings.el")
 
 (custom-set-variables
  ;; custom-set-variables was added by Custom.

@@ -41,6 +41,12 @@ Emacs basic setup
 * ```C-c h``` - Dummy Search
 * ```C-c p f``` - Fuzzy Search
 
+### Projectile Keybinding
+
+* ```C-c r m``` - Search Rails Modals
+* ```C-c r v``` - Search Rails Views
+* ```C-c r l``` - Search Rails Lib
+
 ### Word Manipulation
 
 * ```C-x q``` - Select inside quotes

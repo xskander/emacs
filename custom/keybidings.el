@@ -75,5 +75,7 @@
 
 ;; Mark all the things
 (global-set-key (kbd "C-c C-k a") 'mc/mark-all-like-this)
-;;;(provide 'keybindings.el)
+
+;; projectile keybinding
+(define-key projectile-rails-mode-map (kbd "C-c r") 'projectile-rails-command-map)
 ;;; keybindings.el ends here

@@ -58,10 +58,6 @@
 ;; start web-mode for .erb files
 (add-to-list 'auto-mode-alist '("\\.erb\\'" . web-mode))
 
-;; scss mode
-(autoload 'scss-mode "scss-mode")
-(add-to-list 'auto-mode-alist '("\\.scss\\'" . scss-mode))
-
 ;; Star Yaml Mode
 (add-hook 'yaml-mode-hook
   (lambda ()
