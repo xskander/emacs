@@ -1,0 +1,5 @@
+# -*- mode: snippet -*-
+# name: react component param
+# key: rp
+# --
+$1={$1}

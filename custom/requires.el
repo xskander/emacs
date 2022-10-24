@@ -15,3 +15,5 @@
 
 (setq column-enforce-column 120)
 (add-hook 'prog-mode-hook 'column-enforce-mode)
+
+(require 'prettier-js)

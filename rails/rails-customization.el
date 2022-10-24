@@ -43,8 +43,8 @@
 ;; (add-hook 'find-file-hooks 'turn-on-flyspell)
 
 ;; scss mode
-(autoload 'scss-mode "scss-mode")
-(add-to-list 'auto-mode-alist '("\\.scss\\'" . scss-mode))
+;; (autoload 'scss-mode "scss-mode")
+;; (add-to-list 'auto-mode-alist '("\\.scss\\'" . scss-mode))
 
 ;; Star Yaml Mode
 (add-hook 'yaml-mode-hook
@@ -54,7 +54,6 @@
 ;; use web-mode for .jsx files
 (add-to-list 'auto-mode-alist '("\\.jsx$" . rjsx-mode))
 (add-to-list 'auto-mode-alist '("\\.js$" . rjsx-mode))
-
 
 ;; https://github.com/purcell/exec-path-from-shell
 ;; only need exec-path-from-shell on OSX
@@ -67,7 +66,6 @@
 (define-key projectile-mode-map (kbd "C-c p") 'projectile-command-map)
 (projectile-rails-global-mode 1)
 (setq projectile-rails-expand-snippet nil)
-
 
 (custom-set-variables
  ;; custom-set-variables was added by Custom.
@@ -89,7 +87,7 @@
     ("#CC9393" "#DFAF8F" "#F0DFAF" "#7F9F7F" "#BFEBBF" "#93E0E3" "#94BFF3" "#DC8CC3")))
  '(package-selected-packages
    (quote
-    (zenburn-theme yasnippet yaml-mode web-mode switch-window slim-mode scss-mode rvm rspec-mode rjsx-mode projectile-rails multiple-cursors magit json-mode highlight-indentation flycheck feature-mode expand-region exec-path-from-shell enh-ruby-mode dumb-jump dash-at-point coffee-mode alchemist)))
+    (zenburn-theme yasnippet yaml-mode web-mode switch-window slim-mode rvm rspec-mode rjsx-mode projectile-rails multiple-cursors magit json-mode highlight-indentation flycheck feature-mode expand-region exec-path-from-shell enh-ruby-mode dumb-jump dash-at-point coffee-mode alchemist)))
  '(pdf-view-midnight-colors (quote ("#DCDCCC" . "#383838")))
  '(vc-annotate-background "#2B2B2B")
  '(vc-annotate-color-map
