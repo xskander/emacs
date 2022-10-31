@@ -19,7 +19,7 @@ Emacs basic setup
 
 4. Install additional packages
   ```
-    brew install the_silver_searcher ack ispell
+    brew install the_silver_searcher ack ispell prettier
   ```
 
 ## Keybindings
@@ -40,6 +40,8 @@ Emacs basic setup
 * ```C-q``` - Grep search
 * ```C-c h``` - Dummy Search
 * ```C-c p f``` - Fuzzy Search
+* ```C-c a``` - Avy GoTo Char
+* ```C-c g``` - Avy GoTo Line
 
 ### Projectile Keybinding
 

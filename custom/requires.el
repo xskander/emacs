@@ -26,7 +26,7 @@
 (require 'rvm)
 
 ;; show Debug when errors trigger to help debug this setup
-(setq debug-on-error t)
+;; (setq debug-on-error t)
 
 ;; column enforce column
 (setq column-enforce-column 120)

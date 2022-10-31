@@ -78,4 +78,8 @@
 
 ;; projectile keybinding
 (define-key projectile-rails-mode-map (kbd "C-c r") 'projectile-rails-command-map)
+
+;; avy keybinding. use to search by letter and jump to it.
+(global-set-key (kbd "C-c a") 'avy-goto-char)
+(global-set-key (kbd "C-c l") 'avy-goto-line)
 ;;; keybindings.el ends here

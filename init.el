@@ -12,6 +12,7 @@
 (setq my-required-packages
       (list 'multiple-cursors
             'highlight-indentation
+            'avy
             'switch-window
 	          'enh-ruby-mode
             'prettier-js
