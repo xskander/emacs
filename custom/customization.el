@@ -1,5 +1,4 @@
 ;;; package --- customization.el
-
 ;; no easy keys setup
 (no-easy-keys 1)
 
@@ -18,14 +17,16 @@
 ;; add hook to color css in html/css
 (add-hook 'css-mode-hook 'xah-syntax-color-hex)
 (add-hook 'html-mode-hook 'xah-syntax-color-hex)
+(add-hook 'rjsx-mode-hook 'xah-syntax-color-hex)
 
 ;; Grep search ignore folder
 (eval-after-load 'grep
   '(progn
-     (add-to-list 'grep-find-ignored-directories "public")
+     (add-to-list 'grep-find-ignored-directories "public/*")
      (add-to-list 'grep-find-ignored-directories "coverage")
      (add-to-list 'grep-find-ignored-directories "tmp")
      (add-to-list 'grep-find-ignored-directories "spec/fixtures")
+     (add-to-list 'grep-find-ignored-directories "*/public/*")
      (add-to-list 'grep-find-ignored-directories "log")))
 (add-hook 'grep-mode-hook (lambda () (toggle-truncate-lines 1)))
 
@@ -51,17 +52,6 @@
 
 ;; activate corespunding ruby
 (rvm-activate-corresponding-ruby)
-
-;; js mode for coffe script files
-(add-to-list 'auto-mode-alist '("\\.js.erb\\'" . js-mode))
-
-;; start web-mode for .erb files
-(add-to-list 'auto-mode-alist '("\\.erb\\'" . web-mode))
-
-;; Star Yaml Mode
-(add-hook 'yaml-mode-hook
-  (lambda ()
-    (define-key yaml-mode-map "\C-m" 'newline-and-indent)))
 
 ;; use web-mode for .jsx files
 (add-to-list 'auto-mode-alist '("\\.jsx$" . rjsx-mode))
@@ -133,7 +123,7 @@
 ;; highlight indentation
 (add-hook 'enh-ruby-mode-hook
     (lambda () (highlight-indentation-current-column-mode)))
-(add-hook 'coffee-mode-hook
+(add-hook 'rjsx-mode-hook
     (lambda () (highlight-indentation-current-column-mode)))
 
 ;; rvm use default

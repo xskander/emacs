@@ -25,17 +25,16 @@ Emacs basic setup
 ## Keybindings
 
 ### Magit
-
 * ```C-c g``` - magit
-* ```C-x k``` - kill current buffer
-* ```C-x d``` - Kill all buffers
-* ```C-x n``` - Create new empty buggers
 * ```C-c m``` - Extract branch number
 * ```C-c n``` - Output 'not yet done' in case you want to commit something temporary
 
-### Navigation
+### Buffers
+* ```C-x k``` - kill current buffer
+* ```C-x d``` - Kill all buffers
+* ```C-x b``` - Navigat through Buffers
 
-* ```C-x b``` - Buffer
+### Navigation
 * ```C-x o``` - Switch window
 * ```C-q``` - Grep search
 * ```C-c h``` - Dummy Search
@@ -43,21 +42,18 @@ Emacs basic setup
 * ```C-c a``` - Avy GoTo Char
 * ```C-c g``` - Avy GoTo Line
 
-### Projectile Keybinding
 
+### Projectile Keybinding
 * ```C-c r m``` - Search Rails Modals
 * ```C-c r v``` - Search Rails Views
 * ```C-c r l``` - Search Rails Lib
+* ... look through projectile keybindings
 
 ### Word Manipulation
-
 * ```C-x q``` - Select inside quotes
 * ```C-x p``` - Select inside paranthesys
 * ```C-c r``` - Expand region
-* ```C-c C-x a``` - Mark all like this
 * ```C-c C-k a``` - Mark all like this
-* ```C-c C-x n``` - Mark all like this next line
-* ```C-c C-x p``` - Mark all like this previous line
 * ```C-_ - undo (C-z``` - disabled)
 * ```C-m``` - enter
 * ```C-h``` - backspace

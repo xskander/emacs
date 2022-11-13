@@ -22,7 +22,7 @@ Version 2015-06-11"
   (interactive)
   (font-lock-add-keywords
    nil
-   '(("#[abcdef[:digit:]]\\{6\\}"
+   '(("#[ABCDEFabcdef[:digit:]]\\{6\\}"
       (0 (put-text-property
           (match-beginning 0)
           (match-end 0)

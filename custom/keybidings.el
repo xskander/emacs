@@ -4,11 +4,11 @@
 ;; unset fill column
 (global-unset-key (kbd "C-x f"))
 
-;; unset backspace and enter
-(global-set-key (kbd "<return>") 'ignore)
-(global-set-key (kbd "<backspace>") 'ignore)
-(global-set-key [backspace] 'other-window)
-(global-set-key [return] 'other-window)
+;; ;; unset backspace and enter - doesn't work
+;; (global-set-key (kbd "<return>") 'ignore)
+;; (global-set-key (kbd "<backspace>") 'ignore)
+;; (global-set-key [backspace] 'other-window)
+;; (global-set-key [return] 'other-window)
 
 ;; unbond ctrl z
 (global-unset-key (kbd "C-z"))
@@ -39,7 +39,7 @@
 ;; magit extract number from branch
 (global-set-key (kbd "C-c m") 'git-extract-number-from-branch-name)
 
-;; magit not yet done
+;; magit not yet done - outputs the [not-yet-done] text in git
 (global-set-key (kbd "C-c n") 'git-not-yet-done)
 
 ;; switch window
@@ -50,8 +50,6 @@
 
 ;; kill current buffer
 (global-set-key (kbd "C-x k") 'volatile-kill-buffer)
-;; build new empty buffer for different stuff
-(global-set-key (kbd "C-x n") 'xah-new-empty-buffer)
 
 ;; expand region
 (global-set-key (kbd "C-x q") 'er/mark-inside-quotes)
@@ -63,9 +61,6 @@
 ;; Split window method
 (global-set-key "\C-x2" (lambda () (interactive)(split-window-vertically) (other-window 1)))
 (global-set-key "\C-x3" (lambda () (interactive)(split-window-horizontally) (other-window 1)))
-
-;; bundle-open
-(global-set-key (kbd "C-x a") 'bundle-open)
 
 ;; copy line in one command
 (global-set-key "\C-c\M-w" 'copy-line)

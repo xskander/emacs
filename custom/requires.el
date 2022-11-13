@@ -35,8 +35,6 @@
 (setq make-backup-files nil)
 
 ;; helm setup
-;;(custom-set-variables
-;; '(helm-ag-ignore-buffer-patterns '("\\.min.js\\'" "\\.log\\'" "\\.min.css\\'")))
 (setq mode-line-modes
       (mapcar (lambda (elem)
                 (pcase elem
