@@ -78,3 +78,7 @@
 (global-set-key (kbd "C-c a") 'avy-goto-char)
 (global-set-key (kbd "C-c l") 'avy-goto-line)
 ;;; keybindings.el ends here
+
+;; Move the scroll in Emacs without moving the position cursor.
+(global-set-key "\M-n" 'scroll-page-without-moving-point-down)
+(global-set-key "\M-p" 'scroll-page-without-moving-point-up)

@@ -6,6 +6,8 @@
 (load "no-easy-keys.el")
 (require 'no-easy-keys)
 
+(load "scroll-page-without-moving-point.el")
+
 ;; expand region
 (require 'expand-region)
 
@@ -47,7 +49,7 @@
 (ido-mode t)
 
 ;; line number mode
-(global-linum-mode t)
+(global-display-line-numbers-mode 1)
 
 ;; yes no set as y/n
 (fset 'yes-or-no-p 'y-or-n-p)

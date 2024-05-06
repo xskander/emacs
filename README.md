@@ -41,7 +41,8 @@ Emacs basic setup
 * ```C-c p f``` - Fuzzy Search
 * ```C-c a``` - Avy GoTo Char
 * ```C-c g``` - Avy GoTo Line
-
+* ```M-n``` - Scroll Page down without moving cursour
+* ```M-p``` - Scroll Page up without moving cursour
 
 ### Projectile Keybinding
 * ```C-c r m``` - Search Rails Modals
