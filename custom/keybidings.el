@@ -82,3 +82,10 @@
 ;; Move the scroll in Emacs without moving the position cursor.
 (global-set-key "\M-n" 'scroll-page-without-moving-point-down)
 (global-set-key "\M-p" 'scroll-page-without-moving-point-up)
+
+;; Mwim navigation
+(global-set-key (kbd "C-a") 'mwim-beginning)
+(global-set-key (kbd "C-e") 'mwim-end)
+
+;; (global-set-key (kbd "C-a") 'mwim-beginning-of-code-or-line)
+;; (global-set-key (kbd "C-e") 'mwim-end-of-code-or-line)

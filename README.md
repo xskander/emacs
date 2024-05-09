@@ -43,6 +43,8 @@ Emacs basic setup
 * ```C-c g``` - Avy GoTo Line
 * ```M-n``` - Scroll Page down without moving cursour
 * ```M-p``` - Scroll Page up without moving cursour
+* ```M-a``` - Go to begining of code block
+* ```M-e``` - Go to end of code block
 
 ### Projectile Keybinding
 * ```C-c r m``` - Search Rails Modals

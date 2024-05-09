@@ -61,6 +61,7 @@
 ;; use web-mode for .jsx files
 (add-to-list 'auto-mode-alist '("\\.jsx$" . rjsx-mode))
 (add-to-list 'auto-mode-alist '("\\.js$" . rjsx-mode))
+(add-to-list 'auto-mode-alist '("\\.tsx$" . rjsx-mode))
 
 ;; https://github.com/purcell/exec-path-from-shell
 ;; only need exec-path-from-shell on OSX
