@@ -97,3 +97,9 @@
 
 ;; start web-mode for .erb files
 (setq x-alt-keysym 'meta)
+
+;; flycheck
+(global-flycheck-mode +1)
+
+;; lsp-mode
+(add-hook 'web-mode-hook #'lsp-deferred)

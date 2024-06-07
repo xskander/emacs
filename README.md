@@ -19,7 +19,7 @@ Emacs basic setup
 
 4. Install additional packages
   ```
-    brew install the_silver_searcher ack ispell prettier
+    brew install the_silver_searcher ack ispell prettier deno
   ```
 
 ## Keybindings
@@ -67,3 +67,7 @@ Emacs basic setup
 * ```C-x (``` - start macro
 * ```C-x )``` - end macro
 * ```M-0 C-x e``` - do macro till end of file
+
+## lsp-mode - typescript helper
+* ```M-,``` - lsp-ui-peek
+* ```M. & M,``` - go to

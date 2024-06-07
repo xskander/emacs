@@ -25,8 +25,10 @@
             'yaml-mode
             'projectile-rails
             'column-enforce-mode
-            'typescript-mode
             'mwim
+            'lsp-mode
+            'lsp-ui
+            'flycheck
             'zenburn-theme))
 
 (dolist (package my-required-packages)
@@ -55,7 +57,7 @@
  '(nrepl-message-colors
    '("#CC9393" "#DFAF8F" "#F0DFAF" "#7F9F7F" "#BFEBBF" "#93E0E3" "#94BFF3" "#DC8CC3"))
  '(package-selected-packages
-   '(mwim typescript-mode afterglow straight zenburn-theme yasnippet yaml-mode web-mode switch-window slim-mode rvm rspec-mode rjsx-mode projectile-rails multiple-cursors magit json-mode highlight-indentation flycheck feature-mode expand-region exec-path-from-shell enh-ruby-mode dumb-jump dash-at-point coffee-mode alchemist))
+   '(lsp-ui flycheck-mode mwim typescript-mode afterglow straight zenburn-theme yasnippet yaml-mode web-mode switch-window slim-mode rvm rspec-mode rjsx-mode projectile-rails multiple-cursors magit json-mode highlight-indentation flycheck feature-mode expand-region exec-path-from-shell enh-ruby-mode dumb-jump dash-at-point coffee-mode alchemist))
  '(pdf-view-midnight-colors '("#DCDCCC" . "#383838"))
  '(vc-annotate-background "#2B2B2B")
  '(vc-annotate-color-map
