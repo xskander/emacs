@@ -1,0 +1,8 @@
+- 7 Apr 2025 - https://github.com/syl20bnr/spacemacs/discussions/14423
+  - How to get lsp-deno working through the "The package typescript is not installed.  Unable to find nil"
+
+- 11 Apr 2025 - https://stackoverflow.com/questions/23455761/set-mark-command-not-working-emacs-with-c-spc
+  - Fixing control-space not working - because of mac os x
+
+-12 Apr 2025 - https://emacs.stackexchange.com/questions/8068/emacs-on-terminal-does-not-recognise-option-as-alt-key-on-mac
+  - Making Option the Alt Key

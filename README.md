@@ -22,6 +22,16 @@ Emacs basic setup
     brew install the_silver_searcher ack ispell prettier deno
   ```
 
+5. Other things to consider.
+ - For Deno to work - https://deno.com/
+   ```
+     export DENO_INSTALL="~/.deno"
+     export PATH="$DENO_INSTALL/bin:$PATH"
+   ```
+
+6. Issues over the years
+   - /issues.txt
+
 ## Keybindings
 
 ### Magit

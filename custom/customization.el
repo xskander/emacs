@@ -24,6 +24,7 @@
 (add-hook 'html-mode-hook 'xah-syntax-color-hex)
 (add-hook 'rjsx-mode-hook 'xah-syntax-color-hex)
 (add-hook 'web-mode-hook 'xah-syntax-color-hex)
+(add-hook 'find-file-hook 'xah-syntax-color-hex)
 
 ;; Grep search ignore folder
 (eval-after-load 'grep
