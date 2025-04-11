@@ -30,7 +30,7 @@ Emacs basic setup
    ```
 
 6. Issues over the years
-   - /issues.txt
+   - [issues](https://github.com/xskander/emacs/blob/develop/issues.txt)
 
 ## Keybindings
 
