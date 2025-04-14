@@ -1,5 +1,8 @@
-;;; package - methods
+;; package --- methods.el
+;;; Commentary:
+;;; This file is where new methods are made
 
+;;; Code:
 ;; nuke current buffer
 (defun volatile-kill-buffer ()
   "Kill current buffer unconditionally."
@@ -9,6 +12,7 @@
 
 ;; nuke all buffers
 (defun nuke-all-buffers ()
+  "Nuke all Buffers."
   (interactive)
   (mapcar 'kill-buffer (buffer-list))
   (delete-other-windows))
@@ -39,7 +43,7 @@ When using Homebrew, install it using \"brew install trash\"."
 
 ;; copy lines method
 (defun copy-line (arg)
-  "Copy lines (as many as prefix argument) in the kill ring"
+  "Copy lines (as ARG) in the kill ring."
   (interactive "p")
   (kill-ring-save (line-beginning-position)
                   (line-beginning-position (+ 1 arg)))
@@ -47,7 +51,8 @@ When using Homebrew, install it using \"brew install trash\"."
 
 ;; cut line method
 (defun quick-cut-line ()
-  "Cut the whole line that point is on.  Consecutive calls to this command append each line to the kill-ring."
+  "Cut the whole line that point is on.
+Consecutive calls to this command append each line to the 'kill-ring'."
   (interactive)
   (let ((beg (line-beginning-position 1))
         (end (line-beginning-position 2)))
@@ -60,6 +65,7 @@ When using Homebrew, install it using \"brew install trash\"."
 
 ;; git extract number
 (defun git-extract-number-from-branch-name ()
+  "Extract number from branch name - features/XXX_... ."
   (interactive)
   (let ((current-branch-name (magit-get-current-branch)))
     (progn (string-match "[\w]*\/\\([0-9A-Za-z\-]+\\)" current-branch-name)
@@ -67,17 +73,14 @@ When using Homebrew, install it using \"brew install trash\"."
 
 ;; git not yet done
 (defun git-not-yet-done ()
+  "Paste message not-yet-done for unfinished git messages."
   (interactive)
   (progn (insert "not yet done")))
 
-;;; Create empty bugger
-(defun xah-new-empty-buffer ()
-  (interactive)
-  (let (($buf (generate-new-buffer "untitled")))
-    (switch-to-buffer $buf)
-    (funcall initial-major-mode)
-    (setq buffer-offer-save t)
-    $buf
-    ))
+;; Line too long
+(defface too-long-line
+  '((t :background "gray14"))
+  "Face for parts of a line that co over 80 chars."
+)
 
-;;; methods ends here
+;;; methods.el ends here

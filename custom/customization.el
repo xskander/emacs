@@ -1,6 +1,13 @@
-;;; package --- customization.el
+;; package --- customization.el
+;;; Commentary:
+;;; This file is used to customize stuff.
+;;; Import's and required libraries are in another place
+
+;;; Code:
 ;; no easy keys setup
+;; remove arrows/return/backspace
 (no-easy-keys 1)
+(normal-erase-is-backspace-mode 0)
 
 ;; enforce column node
 (add-hook 'prog-mode-hook 'column-enforce-mode)
@@ -98,3 +105,22 @@
 (add-to-list 'auto-mode-alist '("next/app\\/.*\\.tsx\\'" . web-mode))
 (add-to-list 'auto-mode-alist '("src/app\\/.*\\.ts\\'" . web-mode))
 (add-to-list 'auto-mode-alist '("next/app\\/.*\\.ts\\'" . web-mode))
+
+;; Code
+; This is like the lines-tail setting for whitespace-style
+; Except it uses preprend, so it doesn't clobber other faces
+; Can't remember where I stole this from. Similar code in whitespace.el
+(add-hook 'font-lock-mode-hook (lambda ()
+ (font-lock-add-keywords nil
+   `((,(format
+      "^\\([^\t\n]\\{%s\\}\\|[^\t\n]\\{0,%s\\}\t\\)\\{%d\\}%s\\(.+\\)$"
+      tab-width (- tab-width 1)
+      (/ whitespace-line-column tab-width)
+      (let ((rem (% whitespace-line-column tab-width)))
+        (if (zerop rem)
+        ""
+        (format ".\\{%d\\}" rem))))
+     (2 'too-long-line prepend)))
+   t)))
+
+;;; customization.el ends here

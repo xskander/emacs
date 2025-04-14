@@ -1,14 +1,13 @@
+;; package --- keybindings.el
+;;; Commentary:
+;;; I've used this file to setup different keybindings
+
+;;; Code:
 ;; unset ido buffers
 (global-unset-key "\C-x\C-b")
 
 ;; unset fill column
 (global-unset-key (kbd "C-x f"))
-
-;; ;; unset backspace and enter - doesn't work
-;; (global-set-key (kbd "<return>") 'ignore)
-;; (global-set-key (kbd "<backspace>") 'ignore)
-;; (global-set-key [backspace] 'other-window)
-;; (global-set-key [return] 'other-window)
 
 ;; unbond ctrl z
 (global-unset-key (kbd "C-z"))
@@ -87,5 +86,4 @@
 (global-set-key (kbd "C-a") 'mwim-beginning)
 (global-set-key (kbd "C-e") 'mwim-end)
 
-;; (global-set-key (kbd "C-a") 'mwim-beginning-of-code-or-line)
-;; (global-set-key (kbd "C-e") 'mwim-end-of-code-or-line)
+;;; keybidings.el ends here

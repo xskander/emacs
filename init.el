@@ -1,5 +1,11 @@
 ;;; init.el -- The begining of my emacs setup
+;;; Commentary:
+;; This is where everything is setup.
+;; Import custom/vendors up top
+;; I use packages to get some of the packages i need
 
+
+;;; Code:
 ;; load paths
 (add-to-list 'load-path "~/.emacs.d/custom")
 (add-to-list 'load-path "~/.emacs.d/vendors")

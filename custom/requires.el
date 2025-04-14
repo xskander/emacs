@@ -1,6 +1,15 @@
+;;; package --- requires.el
+;;; Commentary:
+;;; This file is used to load/requires
+
+
 ;; Switch windows
 (require 'switch-window)
 
+;; trailing whitespace
+(require 'whitespace)
+
+;;; Code:
 ;; no easy keys
 ;; disable enter/file in vendors
 (load "no-easy-keys.el")
@@ -103,3 +112,5 @@
 
 ;; lsp-mode
 (add-hook 'web-mode-hook #'lsp-deferred)
+
+;;; requires.el ends here
