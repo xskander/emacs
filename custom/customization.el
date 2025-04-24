@@ -65,7 +65,8 @@
 (add-to-list 'auto-mode-alist '("Gemfile$" . enh-ruby-mode))
 
 ;; activate corespunding ruby
-(rvm-activate-corresponding-ruby)
+(add-hook 'enh-ruby-mode-hook (lambda () (rvm-activate-corresponding-ruby)))
+;; (rvm-activate-corresponding-ruby)
 
 ;; use web-mode for .jsx files
 (add-to-list 'auto-mode-alist '("\\.jsx$" . rjsx-mode))

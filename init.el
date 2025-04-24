@@ -4,7 +4,6 @@
 ;; Import custom/vendors up top
 ;; I use packages to get some of the packages i need
 
-
 ;;; Code:
 ;; load paths
 (add-to-list 'load-path "~/.emacs.d/custom")

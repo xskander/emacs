@@ -19,7 +19,7 @@ Emacs basic setup
 
 4. Install additional packages
   ```
-    brew install the_silver_searcher ack ispell prettier deno
+    brew install the_silver_searcher ack ispell prettier deno trash
   ```
 
 5. Other things to consider.

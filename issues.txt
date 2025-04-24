@@ -4,5 +4,8 @@
 - 11 Apr 2025 - https://stackoverflow.com/questions/23455761/set-mark-command-not-working-emacs-with-c-spc
   - Fixing control-space not working - because of mac os x
 
--12 Apr 2025 - https://emacs.stackexchange.com/questions/8068/emacs-on-terminal-does-not-recognise-option-as-alt-key-on-mac
+- 12 Apr 2025 - https://emacs.stackexchange.com/questions/8068/emacs-on-terminal-does-not-recognise-option-as-alt-key-on-mac
   - Making Option the Alt Key
+
+- 17 Apr 2025 - https://christiantietze.de/posts/2021/06/emacs-trash-file-macos/
+  - Trash doesn't work
