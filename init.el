@@ -18,6 +18,7 @@
       (list 'multiple-cursors
             'highlight-indentation
             'avy
+            'fzf
             'switch-window
 	          'enh-ruby-mode
             'prettier-js
@@ -67,10 +68,11 @@
    '("#CC9393" "#DFAF8F" "#F0DFAF" "#7F9F7F" "#BFEBBF" "#93E0E3"
      "#94BFF3" "#DC8CC3"))
  '(package-selected-packages
-   '(avy column-enforce-mode enh-ruby-mode expand-region flycheck helm-ag
-         highlight-indentation lsp-ui magit multiple-cursors mwim
-         prettier-js projectile-rails rjsx-mode rvm switch-window
-         typescript web-mode yaml-mode yasnippet zenburn-theme))
+   '(avy column-enforce-mode consult counsel enh-ruby-mode expand-region
+         flycheck fzf helm-ag highlight-indentation lsp-ui magit
+         multiple-cursors mwim paredit paredit-everywhere prettier-js
+         projectile-rails rjsx-mode rvm switch-window typescript
+         vertico web-mode yaml-mode yasnippet zenburn-theme))
  '(pdf-view-midnight-colors '("#DCDCCC" . "#383838"))
  '(vc-annotate-background "#2B2B2B")
  '(vc-annotate-color-map

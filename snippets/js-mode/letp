@@ -1,5 +1,0 @@
-# -*- mode: snippet -*-
-# name: let { something } = this.props;
-# key: letp
-# --
-let { $1 } = this.$2

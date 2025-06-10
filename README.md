@@ -19,7 +19,7 @@ Emacs basic setup
 
 4. Install additional packages
   ```
-    brew install the_silver_searcher ack ispell prettier deno trash
+    brew install the_silver_searcher ack ispell prettier deno trash fzf
   ```
 
 5. Other things to consider.
@@ -47,6 +47,7 @@ Emacs basic setup
 ### Navigation
 * ```C-x o``` - Switch window
 * ```C-q``` - Grep search
+* ```C-x f``` - Fzf search
 * ```C-c h``` - Dummy Search
 * ```C-c p f``` - Fuzzy Search
 * ```C-c a``` - Avy GoTo Char
@@ -66,8 +67,12 @@ Emacs basic setup
 * ```C-x q``` - Select inside quotes
 * ```C-x p``` - Select inside paranthesys
 * ```C-c r``` - Expand region
-* ```C-c C-k a``` - Mark all like this
+* ```C-c t``` - Mark all like this
+* ```C-C C-n``` - Next like this
+* ```C-C C-p``` - Previous like this
 * ```C-_ - undo (C-z``` - disabled)
+* ```C-x C-t``` - Swap lines
+* ```M-t``` - Swap word
 * ```C-m``` - enter
 * ```C-h``` - backspace
 * ```C-d``` - delete

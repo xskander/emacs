@@ -25,12 +25,11 @@
 (global-set-key [(control q)] 'rgrep)
 
 ;; multiple lines
-(global-set-key (kbd "C-c C-x n") 'mc/mark-next-like-this)
-(global-set-key (kbd "C-c C-x p") 'mc/mark-previous-like-this)
-(global-set-key (kbd "C-c C-x a") 'mc/mark-all-like-this)
+(global-set-key (kbd "C-c C-n") 'mc/mark-next-like-this)
+(global-set-key (kbd "C-c C-p") 'mc/mark-previous-like-this)
 
 ;; multiple lines
-(global-set-key (kbd "C-c C-k a") 'mc/mark-all-like-this)
+(global-set-key (kbd "C-c t") 'mc/mark-all-like-this)
 
 ;; magit
 (global-set-key (kbd "C-c g") 'magit-status)
@@ -67,8 +66,8 @@
 ;; cut line in one command
 (global-set-key "\C-c\C-w" 'quick-cut-line)
 
-;; Mark all the things
-(global-set-key (kbd "C-c C-k a") 'mc/mark-all-like-this)
+;; ;; Mark all the things
+;; (global-set-key (kbd "C-c C-k a") 'mc/mark-all-like-this)
 
 ;; projectile keybinding
 (define-key projectile-rails-mode-map (kbd "C-c r") 'projectile-rails-command-map)
@@ -85,5 +84,8 @@
 ;; Mwim navigation
 (global-set-key (kbd "C-a") 'mwim-beginning)
 (global-set-key (kbd "C-e") 'mwim-end)
+
+;; fzf keybindings
+(global-set-key (kbd "C-x f") 'fzf)
 
 ;;; keybidings.el ends here
